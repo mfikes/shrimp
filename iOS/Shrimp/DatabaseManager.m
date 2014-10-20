@@ -20,8 +20,19 @@
     if (self = [super init]) {
         
         if (!self.getShrimp.count) {
-            [self createShrimpWithName:@"Foo" desc:@"Food" edible:YES];
-            [self createShrimpWithName:@"Bar" desc:@"Not food" edible:NO];
+            [self createShrimpWithName:@"Penaeus monodon" desc:@"The giant tiger prawn or Asian tiger shrimp." edible:YES];
+            [self createShrimpWithName:@"Pandalus borealis" desc:@"A species of caridean shrimp found in cold parts of the Atlantic and Pacific Oceans." edible:YES];
+            [self createShrimpWithName:@"Procarididea" desc:@"An infraorder of decapods, comprising only eleven species." edible:NO];
+            [self createShrimpWithName:@"Stenopodidea" desc:@"A small group of decapod crustaceans." edible:NO];
+            [self createShrimpWithName:@"Artemia" desc:@"A genus of aquatic crustaceans known as brine shrimp." edible:NO];
+            [self createShrimpWithName:@"Conchostraca" desc:@"Clam shrimp are a taxon of bivalved branchiopod crustaceans that resemble the unrelated bivalved molluscs." edible:NO];
+            [self createShrimpWithName:@"Anostraca" desc:@"One of the four orders of crustaceans in the class Branchiopoda." edible:NO];
+            [self createShrimpWithName:@"Notostraca" desc:@"The single family Triopsidae, containing the tadpole shrimp or shield shrimp." edible:NO];
+            [self createShrimpWithName:@"Lophogastrida" desc:@"An order of malacostracan crustaceans in the superorder Peracarida." edible:NO];
+            [self createShrimpWithName:@"Stomatopods" desc:@"Marine crustaceans, the members of the order Stomatopoda." edible:NO];
+            [self createShrimpWithName:@"Mysida" desc:@"An order of small, shrimp-like crustaceans in the malacostracan superorder Peracarida." edible:NO];
+            [self createShrimpWithName:@"Caprellidae" desc:@"A family of amphipods commonly known as skeleton shrimps." edible:NO];
+            [self createShrimpWithName:@"Ostracod" desc:@"A class of the Crustacea (class Ostracoda), sometimes known as seed shrimp." edible:NO];
 
             [self saveContext];
         }
