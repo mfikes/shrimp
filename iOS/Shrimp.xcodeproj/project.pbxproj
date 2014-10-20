@@ -97,7 +97,6 @@
 		ED26DE8F19F57E4400822BB4 /* GBYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTextField.m; sourceTree = "<group>"; };
 		ED26DE9019F57E4400822BB4 /* GBYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYViewController.h; sourceTree = "<group>"; };
 		ED26DE9119F57E4400822BB4 /* GBYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYViewController.m; sourceTree = "<group>"; };
-		ED26DEA919F580AC00822BB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7941C19F571CF005E8532 /* Shrimp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7942019F571CF005E8532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF7942119F571CF005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,7 +188,6 @@
 		EDF7941319F571CF005E8532 = {
 			isa = PBXGroup;
 			children = (
-				ED26DEA919F580AC00822BB4 /* UIKit.framework */,
 				ED26DE6319F57E4400822BB4 /* Goby */,
 				EDF7941E19F571CF005E8532 /* Shrimp */,
 				EDF7943B19F571CF005E8532 /* ShrimpTests */,
