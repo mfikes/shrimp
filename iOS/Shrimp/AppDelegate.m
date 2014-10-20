@@ -14,12 +14,12 @@
     // Override point for customization after application launch.
     
     NSLog(@"Initializing ClojureScript");
-    self.gobyManager = [[GBYManager alloc] initInAppNamespace:@"shrimp"];
+    self.cljsManager = [[GBYManager alloc] initInAppNamespace:@"shrimp"];
     
     NSLog(@"Initializing database");
     self.databaseManager = [[DatabaseManager alloc] init];
     
-    JSValue* setDatabaseManagerFn = [self.gobyManager getCljsSymbol:@"set-database-manager!" inNamespace:@"shrimp" andSubNamespace:@"database"];
+    JSValue* setDatabaseManagerFn = [self.cljsManager getCljsSymbol:@"set-database-manager!" inNamespace:@"shrimp" andSubNamespace:@"database"];
     [setDatabaseManagerFn callWithArguments:@[self.databaseManager]];
 
     return YES;

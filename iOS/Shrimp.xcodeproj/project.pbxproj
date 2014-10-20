@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0E172F19F58F29004345D9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E172E19F58F29004345D9 /* MasterViewController.m */; };
+		ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173119F58F41004345D9 /* DetailViewController.m */; };
+		ED0E173519F58F84004345D9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173419F58F84004345D9 /* BaseViewController.m */; };
 		ED26DE9219F57E4400822BB4 /* GBYAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */; };
 		ED26DE9319F57E4400822BB4 /* GBYBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6719F57E4400822BB4 /* GBYBarButtonItem.m */; };
 		ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6919F57E4400822BB4 /* GBYButton.m */; };
@@ -37,7 +40,6 @@
 		EDF7942219F571CF005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942119F571CF005E8532 /* main.m */; };
 		EDF7942519F571CF005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942419F571CF005E8532 /* AppDelegate.m */; };
 		EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942619F571CF005E8532 /* Shrimp.xcdatamodeld */; };
-		EDF7942B19F571CF005E8532 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942A19F571CF005E8532 /* ViewController.m */; };
 		EDF7942E19F571CF005E8532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF7942C19F571CF005E8532 /* Main.storyboard */; };
 		EDF7943019F571CF005E8532 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF7942F19F571CF005E8532 /* Images.xcassets */; };
 		EDF7943319F571CF005E8532 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF7943119F571CF005E8532 /* LaunchScreen.xib */; };
@@ -55,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED0E172D19F58F29004345D9 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		ED0E172E19F58F29004345D9 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		ED0E173019F58F41004345D9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		ED0E173119F58F41004345D9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED0E173319F58F84004345D9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		ED0E173419F58F84004345D9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		ED26DE6419F57E4400822BB4 /* GBYAlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYAlertUtils.h; sourceTree = "<group>"; };
 		ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYAlertUtils.m; sourceTree = "<group>"; };
 		ED26DE6619F57E4400822BB4 /* GBYBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYBarButtonItem.h; sourceTree = "<group>"; };
@@ -114,8 +122,6 @@
 		EDF7942319F571CF005E8532 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDF7942419F571CF005E8532 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EDF7942719F571CF005E8532 /* Shrimp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shrimp.xcdatamodel; sourceTree = "<group>"; };
-		EDF7942919F571CF005E8532 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EDF7942A19F571CF005E8532 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EDF7942D19F571CF005E8532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDF7942F19F571CF005E8532 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EDF7943219F571CF005E8532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -221,8 +227,12 @@
 			children = (
 				EDF7942319F571CF005E8532 /* AppDelegate.h */,
 				EDF7942419F571CF005E8532 /* AppDelegate.m */,
-				EDF7942919F571CF005E8532 /* ViewController.h */,
-				EDF7942A19F571CF005E8532 /* ViewController.m */,
+				ED0E173319F58F84004345D9 /* BaseViewController.h */,
+				ED0E173419F58F84004345D9 /* BaseViewController.m */,
+				ED0E172D19F58F29004345D9 /* MasterViewController.h */,
+				ED0E172E19F58F29004345D9 /* MasterViewController.m */,
+				ED0E173019F58F41004345D9 /* DetailViewController.h */,
+				ED0E173119F58F41004345D9 /* DetailViewController.m */,
 				ED26DEAE19F5869700822BB4 /* BaseDatabaseManager.h */,
 				ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */,
 				ED26DEAB19F5861800822BB4 /* DatabaseManager.h */,
@@ -372,9 +382,10 @@
 				ED26DEA519F57E4400822BB4 /* GBYTableViewDataSource.m in Sources */,
 				ED26DEA119F57E4400822BB4 /* GBYSwitch.m in Sources */,
 				EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */,
-				EDF7942B19F571CF005E8532 /* ViewController.m in Sources */,
 				ED26DEAD19F5861800822BB4 /* DatabaseManager.m in Sources */,
 				ED26DE9A19F57E4400822BB4 /* GBYManager.m in Sources */,
+				ED0E173519F58F84004345D9 /* BaseViewController.m in Sources */,
+				ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */,
 				ED26DE9819F57E4400822BB4 /* GBYImageView.m in Sources */,
 				ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */,
 				ED26DE9719F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m in Sources */,
@@ -388,6 +399,7 @@
 				ED26DE9C19F57E4400822BB4 /* GBYProtocolForwarder.m in Sources */,
 				ED26DE9E19F57E4400822BB4 /* GBYSegmentedControl.m in Sources */,
 				ED26DEA819F57E4400822BB4 /* GBYViewController.m in Sources */,
+				ED0E172F19F58F29004345D9 /* MasterViewController.m in Sources */,
 				ED26DEB019F5869700822BB4 /* BaseDatabaseManager.m in Sources */,
 				EDF7942219F571CF005E8532 /* main.m in Sources */,
 				ED26DE9519F57E4400822BB4 /* GBYColor.m in Sources */,

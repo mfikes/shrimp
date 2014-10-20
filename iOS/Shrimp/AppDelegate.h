@@ -9,7 +9,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) DatabaseManager* databaseManager;
-@property (strong, nonatomic) GBYManager* gobyManager;
+@property (strong, nonatomic) GBYManager* cljsManager;
 
 @end
 
