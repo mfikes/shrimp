@@ -1,6 +1,9 @@
 (ns shrimp.core
   (:require [shrimp.init]
-            [goby-core :refer [map-keys env]]))
+            [goby.core :refer [env]]))
+
+(defn map-keys [f m]
+  (reduce-kv (fn [r k v] (assoc r (f k) v)) {} m))
 
 (defn ^:export init!
   [js-env]
@@ -12,5 +15,5 @@
 
   (when (:debug-build @env)
     (println "Connecting to brepl")
-    (literacy-log.init/weasel-connect)
+    (shrimp.init/weasel-connect)
     (set! *print-newline* true)))
