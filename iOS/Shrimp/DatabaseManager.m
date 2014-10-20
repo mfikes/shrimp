@@ -7,17 +7,25 @@
 
 @implementation DatabaseManager
 
+-(void)createShrimpWithName:(NSString*)name desc:(NSString*)desc edible:(BOOL)edible
+{
+    Shrimp* shrimp = [NSEntityDescription insertNewObjectForEntityForName:@"Shrimp" inManagedObjectContext:self.managedObjectContext];
+    shrimp.name = name;
+    shrimp.edible = @(edible);
+    shrimp.desc = desc;
+}
+
 -(id)init
 {
     if (self = [super init]) {
         
-        Shrimp* shrimp = [NSEntityDescription insertNewObjectForEntityForName:@"Shrimp" inManagedObjectContext:self.managedObjectContext];
-        shrimp.name = @"Pistol";
-        shrimp.edible = @NO;
-        shrimp.desc = @"Hangs out with a Goby.";
+        if (!self.getShrimp.count) {
+            [self createShrimpWithName:@"Foo" desc:@"Food" edible:YES];
+            [self createShrimpWithName:@"Bar" desc:@"Not food" edible:NO];
+
+            [self saveContext];
+        }
         
-        [self saveContext];
-         
     }
     return self;
 }

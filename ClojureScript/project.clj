@@ -8,7 +8,7 @@
                       [jarohen/simple-brepl "0.1.1"]]
             :source-paths ["goby-src"
                            "src"]
-            :brepl {:ip "localhost"}
+            :brepl {:ip "127.0.0.1"}
             :cljsbuild {:builds {:dev
                                   {:source-paths ["goby-src"
                                                   "src"
