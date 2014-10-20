@@ -1,0 +1,8 @@
+ClojureScript/target
+ClojureScript/js
+ClojureScript/out
+ClojureScript/repl
+.nrepl-port
+.lein-repl-history
+iOS/Shrimp.xcodeproj/project.xcworkspace
+iOS/Shrimp.xcodeproj/xcuserdata
