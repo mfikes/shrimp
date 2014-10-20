@@ -9,8 +9,9 @@ Overview
 This is a sample project illustrating the use of Goby, which is some glue code facilitating the creation of iOS apps in ClojureScript.
 
 This repo is really two projects in one:
+
 1. An iOS app which contains the Storyboards and which loads the compiled JavaScript.
-2. A ClojureScript Leinengen project which contains implementations for the view controllers.
+2. A ClojureScript Leiningen project which contains implementations for the view controllers.
 
 The Goby project is reused by simply importing it as a Git submodule, along with a few symbolic links to the relevant iOS and ClojureScript artifacts from Goby so that they appear in the right place.
 
@@ -22,6 +23,7 @@ First, go into the `ClojureScript` directory and run `lein cljsbuild once dev`. 
 Then open the `iOS/Shrimp.xcodeproj` in Xcode and and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
 To interact with the app via the REPL:
+
 1. Run `lein repl` in the `ClojureScript` directory
 2. Run `(simple-brepl)`.(Shoutout to James Henderson for [simple-brepl](https://github.com/james-henderson/simple-brepl)!)
 3. Restart the iOS app in the simulator.
