@@ -7,8 +7,7 @@
 
 @protocol DatabaseManager <JSExport>
 
--(NSArray*)getBooks;
--(NSArray*)getSessions;
+-(NSArray*)getShrimp;
 
 - (GBYFetchedResultsController*)createShrimpFetchedResultsController;
 
