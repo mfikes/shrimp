@@ -14,6 +14,5 @@
   (println "ClojureScript initialized: " @env)
 
   (when (:debug-build @env)
-    (println "Connecting to brepl")
     (shrimp.init/weasel-connect)
     (set! *print-newline* true)))
