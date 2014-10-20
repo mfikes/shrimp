@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED26DE9219F57E4400822BB4 /* GBYAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */; };
+		ED26DE9319F57E4400822BB4 /* GBYBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6719F57E4400822BB4 /* GBYBarButtonItem.m */; };
+		ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6919F57E4400822BB4 /* GBYButton.m */; };
+		ED26DE9519F57E4400822BB4 /* GBYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6B19F57E4400822BB4 /* GBYColor.m */; };
+		ED26DE9619F57E4400822BB4 /* GBYFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6D19F57E4400822BB4 /* GBYFetchedResultsController.m */; };
+		ED26DE9719F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6F19F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m */; };
+		ED26DE9819F57E4400822BB4 /* GBYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7119F57E4400822BB4 /* GBYImageView.m */; };
+		ED26DE9919F57E4400822BB4 /* GBYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7319F57E4400822BB4 /* GBYLabel.m */; };
+		ED26DE9A19F57E4400822BB4 /* GBYManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7519F57E4400822BB4 /* GBYManager.m */; };
+		ED26DE9B19F57E4400822BB4 /* GBYNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7719F57E4400822BB4 /* GBYNavigationItem.m */; };
+		ED26DE9C19F57E4400822BB4 /* GBYProtocolForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7919F57E4400822BB4 /* GBYProtocolForwarder.m */; };
+		ED26DE9D19F57E4400822BB4 /* GBYScrollViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7B19F57E4400822BB4 /* GBYScrollViewDelegate.m */; };
+		ED26DE9E19F57E4400822BB4 /* GBYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7D19F57E4400822BB4 /* GBYSegmentedControl.m */; };
+		ED26DE9F19F57E4400822BB4 /* GBYSoundUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE7F19F57E4400822BB4 /* GBYSoundUtils.m */; };
+		ED26DEA019F57E4400822BB4 /* GBYStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8119F57E4400822BB4 /* GBYStepper.m */; };
+		ED26DEA119F57E4400822BB4 /* GBYSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8319F57E4400822BB4 /* GBYSwitch.m */; };
+		ED26DEA219F57E4400822BB4 /* GBYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8519F57E4400822BB4 /* GBYTabBarController.m */; };
+		ED26DEA319F57E4400822BB4 /* GBYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8719F57E4400822BB4 /* GBYTableView.m */; };
+		ED26DEA419F57E4400822BB4 /* GBYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8919F57E4400822BB4 /* GBYTableViewCell.m */; };
+		ED26DEA519F57E4400822BB4 /* GBYTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8B19F57E4400822BB4 /* GBYTableViewDataSource.m */; };
+		ED26DEA619F57E4400822BB4 /* GBYTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8D19F57E4400822BB4 /* GBYTableViewDelegate.m */; };
+		ED26DEA719F57E4400822BB4 /* GBYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE8F19F57E4400822BB4 /* GBYTextField.m */; };
+		ED26DEA819F57E4400822BB4 /* GBYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE9119F57E4400822BB4 /* GBYViewController.m */; };
 		EDF7942219F571CF005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942119F571CF005E8532 /* main.m */; };
 		EDF7942519F571CF005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942419F571CF005E8532 /* AppDelegate.m */; };
 		EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942619F571CF005E8532 /* Shrimp.xcdatamodeld */; };
@@ -28,6 +51,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED26DE6419F57E4400822BB4 /* GBYAlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYAlertUtils.h; sourceTree = "<group>"; };
+		ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYAlertUtils.m; sourceTree = "<group>"; };
+		ED26DE6619F57E4400822BB4 /* GBYBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYBarButtonItem.h; sourceTree = "<group>"; };
+		ED26DE6719F57E4400822BB4 /* GBYBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYBarButtonItem.m; sourceTree = "<group>"; };
+		ED26DE6819F57E4400822BB4 /* GBYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYButton.h; sourceTree = "<group>"; };
+		ED26DE6919F57E4400822BB4 /* GBYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYButton.m; sourceTree = "<group>"; };
+		ED26DE6A19F57E4400822BB4 /* GBYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYColor.h; sourceTree = "<group>"; };
+		ED26DE6B19F57E4400822BB4 /* GBYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYColor.m; sourceTree = "<group>"; };
+		ED26DE6C19F57E4400822BB4 /* GBYFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYFetchedResultsController.h; sourceTree = "<group>"; };
+		ED26DE6D19F57E4400822BB4 /* GBYFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYFetchedResultsController.m; sourceTree = "<group>"; };
+		ED26DE6E19F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		ED26DE6F19F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		ED26DE7019F57E4400822BB4 /* GBYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYImageView.h; sourceTree = "<group>"; };
+		ED26DE7119F57E4400822BB4 /* GBYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYImageView.m; sourceTree = "<group>"; };
+		ED26DE7219F57E4400822BB4 /* GBYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYLabel.h; sourceTree = "<group>"; };
+		ED26DE7319F57E4400822BB4 /* GBYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYLabel.m; sourceTree = "<group>"; };
+		ED26DE7419F57E4400822BB4 /* GBYManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYManager.h; sourceTree = "<group>"; };
+		ED26DE7519F57E4400822BB4 /* GBYManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYManager.m; sourceTree = "<group>"; };
+		ED26DE7619F57E4400822BB4 /* GBYNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYNavigationItem.h; sourceTree = "<group>"; };
+		ED26DE7719F57E4400822BB4 /* GBYNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYNavigationItem.m; sourceTree = "<group>"; };
+		ED26DE7819F57E4400822BB4 /* GBYProtocolForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYProtocolForwarder.h; sourceTree = "<group>"; };
+		ED26DE7919F57E4400822BB4 /* GBYProtocolForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYProtocolForwarder.m; sourceTree = "<group>"; };
+		ED26DE7A19F57E4400822BB4 /* GBYScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYScrollViewDelegate.h; sourceTree = "<group>"; };
+		ED26DE7B19F57E4400822BB4 /* GBYScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYScrollViewDelegate.m; sourceTree = "<group>"; };
+		ED26DE7C19F57E4400822BB4 /* GBYSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYSegmentedControl.h; sourceTree = "<group>"; };
+		ED26DE7D19F57E4400822BB4 /* GBYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYSegmentedControl.m; sourceTree = "<group>"; };
+		ED26DE7E19F57E4400822BB4 /* GBYSoundUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYSoundUtils.h; sourceTree = "<group>"; };
+		ED26DE7F19F57E4400822BB4 /* GBYSoundUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYSoundUtils.m; sourceTree = "<group>"; };
+		ED26DE8019F57E4400822BB4 /* GBYStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYStepper.h; sourceTree = "<group>"; };
+		ED26DE8119F57E4400822BB4 /* GBYStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYStepper.m; sourceTree = "<group>"; };
+		ED26DE8219F57E4400822BB4 /* GBYSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYSwitch.h; sourceTree = "<group>"; };
+		ED26DE8319F57E4400822BB4 /* GBYSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYSwitch.m; sourceTree = "<group>"; };
+		ED26DE8419F57E4400822BB4 /* GBYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTabBarController.h; sourceTree = "<group>"; };
+		ED26DE8519F57E4400822BB4 /* GBYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTabBarController.m; sourceTree = "<group>"; };
+		ED26DE8619F57E4400822BB4 /* GBYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTableView.h; sourceTree = "<group>"; };
+		ED26DE8719F57E4400822BB4 /* GBYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTableView.m; sourceTree = "<group>"; };
+		ED26DE8819F57E4400822BB4 /* GBYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTableViewCell.h; sourceTree = "<group>"; };
+		ED26DE8919F57E4400822BB4 /* GBYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTableViewCell.m; sourceTree = "<group>"; };
+		ED26DE8A19F57E4400822BB4 /* GBYTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTableViewDataSource.h; sourceTree = "<group>"; };
+		ED26DE8B19F57E4400822BB4 /* GBYTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTableViewDataSource.m; sourceTree = "<group>"; };
+		ED26DE8C19F57E4400822BB4 /* GBYTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTableViewDelegate.h; sourceTree = "<group>"; };
+		ED26DE8D19F57E4400822BB4 /* GBYTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTableViewDelegate.m; sourceTree = "<group>"; };
+		ED26DE8E19F57E4400822BB4 /* GBYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYTextField.h; sourceTree = "<group>"; };
+		ED26DE8F19F57E4400822BB4 /* GBYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYTextField.m; sourceTree = "<group>"; };
+		ED26DE9019F57E4400822BB4 /* GBYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYViewController.h; sourceTree = "<group>"; };
+		ED26DE9119F57E4400822BB4 /* GBYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYViewController.m; sourceTree = "<group>"; };
+		ED26DEA919F580AC00822BB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDF7941C19F571CF005E8532 /* Shrimp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7942019F571CF005E8532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF7942119F571CF005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,9 +132,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED26DE6319F57E4400822BB4 /* Goby */ = {
+			isa = PBXGroup;
+			children = (
+				ED26DE6419F57E4400822BB4 /* GBYAlertUtils.h */,
+				ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */,
+				ED26DE6619F57E4400822BB4 /* GBYBarButtonItem.h */,
+				ED26DE6719F57E4400822BB4 /* GBYBarButtonItem.m */,
+				ED26DE6819F57E4400822BB4 /* GBYButton.h */,
+				ED26DE6919F57E4400822BB4 /* GBYButton.m */,
+				ED26DE6A19F57E4400822BB4 /* GBYColor.h */,
+				ED26DE6B19F57E4400822BB4 /* GBYColor.m */,
+				ED26DE6C19F57E4400822BB4 /* GBYFetchedResultsController.h */,
+				ED26DE6D19F57E4400822BB4 /* GBYFetchedResultsController.m */,
+				ED26DE6E19F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.h */,
+				ED26DE6F19F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m */,
+				ED26DE7019F57E4400822BB4 /* GBYImageView.h */,
+				ED26DE7119F57E4400822BB4 /* GBYImageView.m */,
+				ED26DE7219F57E4400822BB4 /* GBYLabel.h */,
+				ED26DE7319F57E4400822BB4 /* GBYLabel.m */,
+				ED26DE7419F57E4400822BB4 /* GBYManager.h */,
+				ED26DE7519F57E4400822BB4 /* GBYManager.m */,
+				ED26DE7619F57E4400822BB4 /* GBYNavigationItem.h */,
+				ED26DE7719F57E4400822BB4 /* GBYNavigationItem.m */,
+				ED26DE7819F57E4400822BB4 /* GBYProtocolForwarder.h */,
+				ED26DE7919F57E4400822BB4 /* GBYProtocolForwarder.m */,
+				ED26DE7A19F57E4400822BB4 /* GBYScrollViewDelegate.h */,
+				ED26DE7B19F57E4400822BB4 /* GBYScrollViewDelegate.m */,
+				ED26DE7C19F57E4400822BB4 /* GBYSegmentedControl.h */,
+				ED26DE7D19F57E4400822BB4 /* GBYSegmentedControl.m */,
+				ED26DE7E19F57E4400822BB4 /* GBYSoundUtils.h */,
+				ED26DE7F19F57E4400822BB4 /* GBYSoundUtils.m */,
+				ED26DE8019F57E4400822BB4 /* GBYStepper.h */,
+				ED26DE8119F57E4400822BB4 /* GBYStepper.m */,
+				ED26DE8219F57E4400822BB4 /* GBYSwitch.h */,
+				ED26DE8319F57E4400822BB4 /* GBYSwitch.m */,
+				ED26DE8419F57E4400822BB4 /* GBYTabBarController.h */,
+				ED26DE8519F57E4400822BB4 /* GBYTabBarController.m */,
+				ED26DE8619F57E4400822BB4 /* GBYTableView.h */,
+				ED26DE8719F57E4400822BB4 /* GBYTableView.m */,
+				ED26DE8819F57E4400822BB4 /* GBYTableViewCell.h */,
+				ED26DE8919F57E4400822BB4 /* GBYTableViewCell.m */,
+				ED26DE8A19F57E4400822BB4 /* GBYTableViewDataSource.h */,
+				ED26DE8B19F57E4400822BB4 /* GBYTableViewDataSource.m */,
+				ED26DE8C19F57E4400822BB4 /* GBYTableViewDelegate.h */,
+				ED26DE8D19F57E4400822BB4 /* GBYTableViewDelegate.m */,
+				ED26DE8E19F57E4400822BB4 /* GBYTextField.h */,
+				ED26DE8F19F57E4400822BB4 /* GBYTextField.m */,
+				ED26DE9019F57E4400822BB4 /* GBYViewController.h */,
+				ED26DE9119F57E4400822BB4 /* GBYViewController.m */,
+			);
+			name = Goby;
+			path = ../Goby/iOS/src;
+			sourceTree = "<group>";
+		};
 		EDF7941319F571CF005E8532 = {
 			isa = PBXGroup;
 			children = (
+				ED26DEA919F580AC00822BB4 /* UIKit.framework */,
+				ED26DE6319F57E4400822BB4 /* Goby */,
 				EDF7941E19F571CF005E8532 /* Shrimp */,
 				EDF7943B19F571CF005E8532 /* ShrimpTests */,
 				EDF7941D19F571CF005E8532 /* Products */,
@@ -222,10 +348,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED26DE9F19F57E4400822BB4 /* GBYSoundUtils.m in Sources */,
+				ED26DEA219F57E4400822BB4 /* GBYTabBarController.m in Sources */,
 				EDF7942519F571CF005E8532 /* AppDelegate.m in Sources */,
+				ED26DEA619F57E4400822BB4 /* GBYTableViewDelegate.m in Sources */,
+				ED26DEA519F57E4400822BB4 /* GBYTableViewDataSource.m in Sources */,
+				ED26DEA119F57E4400822BB4 /* GBYSwitch.m in Sources */,
 				EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */,
 				EDF7942B19F571CF005E8532 /* ViewController.m in Sources */,
+				ED26DE9A19F57E4400822BB4 /* GBYManager.m in Sources */,
+				ED26DE9819F57E4400822BB4 /* GBYImageView.m in Sources */,
+				ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */,
+				ED26DE9719F57E4400822BB4 /* GBYFetchedResultsControllerDelegate.m in Sources */,
+				ED26DE9B19F57E4400822BB4 /* GBYNavigationItem.m in Sources */,
+				ED26DEA019F57E4400822BB4 /* GBYStepper.m in Sources */,
+				ED26DEA319F57E4400822BB4 /* GBYTableView.m in Sources */,
+				ED26DE9219F57E4400822BB4 /* GBYAlertUtils.m in Sources */,
+				ED26DEA719F57E4400822BB4 /* GBYTextField.m in Sources */,
+				ED26DE9D19F57E4400822BB4 /* GBYScrollViewDelegate.m in Sources */,
+				ED26DE9919F57E4400822BB4 /* GBYLabel.m in Sources */,
+				ED26DE9C19F57E4400822BB4 /* GBYProtocolForwarder.m in Sources */,
+				ED26DE9E19F57E4400822BB4 /* GBYSegmentedControl.m in Sources */,
+				ED26DEA819F57E4400822BB4 /* GBYViewController.m in Sources */,
 				EDF7942219F571CF005E8532 /* main.m in Sources */,
+				ED26DE9519F57E4400822BB4 /* GBYColor.m in Sources */,
+				ED26DE9319F57E4400822BB4 /* GBYBarButtonItem.m in Sources */,
+				ED26DE9619F57E4400822BB4 /* GBYFetchedResultsController.m in Sources */,
+				ED26DEA419F57E4400822BB4 /* GBYTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +567,7 @@
 				EDF7944419F571CF005E8532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDF7944519F571CF005E8532 /* Build configuration list for PBXNativeTarget "ShrimpTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +576,7 @@
 				EDF7944719F571CF005E8532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
