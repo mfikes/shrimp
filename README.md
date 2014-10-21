@@ -31,3 +31,7 @@ To interact with the app via the REPL:
 5. Switch to the namespace for that view controller using `(in-ns 'shrimp.detail-view-controller)`.
 6. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello”)`.
 
+License
+=======
+
+Distributed under the Eclipse Public License, which is also used by ClojureScript.
