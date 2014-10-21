@@ -15,6 +15,8 @@ This repo is really two projects in one:
 
 The Goby project is reused by simply importing it as a Git submodule, along with a few symbolic links to the relevant iOS and ClojureScript artifacts from Goby so that they appear in the right place.
 
+This project illustrates how UIKit elements are injected into ClojureScript and how Objective-C protocols such as `TableViewDataSource` are implemented. It also shows how CoreData can be used, injecting (mutable) CoreData objects into ClojureScript.
+
 Running
 =======
 
