@@ -35,7 +35,7 @@ To interact with the app via the REPL:
 
 Here is what this all looks like in [Cursive](https://cursiveclojure.com):
 
-![](https://github.com/mfikes/shrimp/deveng.png)
+![](https://raw.githubusercontent.com/mfikes/shrimp/master/devenv.png)
 
 License
 =======
