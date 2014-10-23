@@ -13,7 +13,7 @@ This repo is really two projects in one:
 1. An iOS app which contains the Storyboards and which loads the compiled JavaScript.
 2. A ClojureScript Leiningen project which contains implementations for the view controllers.
 
-The Goby project is reused by simply importing it as a Git submodule, along with a few symbolic links to the relevant iOS and ClojureScript artifacts from Goby so that they appear in the right place.
+The Goby project is reused by virtue of it having been set up as a Git submodule, along with a few symbolic links to the relevant iOS and ClojureScript artifacts from Goby so that they appear in the right place. In the future, this will likely be revised so that these dependencies can be managed via CocoaPods and Clojars.
 
 This project illustrates how UIKit elements are injected into ClojureScript and how Objective-C protocols such as `UITableViewDataSource` are implemented. It also shows how CoreData can be used, injecting (mutable) CoreData objects into ClojureScript.
 
