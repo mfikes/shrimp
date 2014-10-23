@@ -24,6 +24,9 @@ First, go into the `ClojureScript` directory and run `lein cljsbuild once dev`. 
 
 Then open the `iOS/Shrimp.xcodeproj` in Xcode and and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
+REPL
+====
+
 To interact with the app via the REPL:
 
 1. Run `lein repl` in the `ClojureScript` directory
@@ -32,6 +35,8 @@ To interact with the app via the REPL:
 4. Go to the details page for any of the Shrimp
 5. Switch to the namespace for that view controller using `(in-ns 'shrimp.detail-view-controller)`.
 6. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello”)`.
+
+You can also establish a REPL over TCP/IP with a test device. To do this, modify `:brepl {:ip "127.0.0.1”}` in `project.clj` and `(ws-repl/connect "ws://127.0.0.1:9001”)` in the `dev` version of `shrimp.init.weasel-connect` to reflect your Mac’s IP address.
 
 Here is what this all looks like in [Cursive](https://cursiveclojure.com):
 
