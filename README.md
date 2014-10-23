@@ -27,7 +27,7 @@ Then open the `iOS/Shrimp.xcodeproj` in Xcode and and run the project in an iPho
 To interact with the app via the REPL:
 
 1. Run `lein repl` in the `ClojureScript` directory
-2. Run `(simple-brepl)`.(Shoutout to James Henderson for [simple-brepl](https://github.com/james-henderson/simple-brepl)!)
+2. Run `(simple-brepl)`. (Shoutout to James Henderson for [simple-brepl](https://github.com/james-henderson/simple-brepl)!)
 3. Restart the iOS app in the simulator.
 4. Go to the details page for any of the Shrimp
 5. Switch to the namespace for that view controller using `(in-ns 'shrimp.detail-view-controller)`.
