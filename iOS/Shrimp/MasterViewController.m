@@ -15,9 +15,9 @@
                          [GBYTableView wrap:self.tableView]]];
 }
 
-- (NSString*)getSubNamespace
+- (NSString*)getNamespace
 {
-    return @"master-view-controller";
+    return @"shrimp.master-view-controller";
 }
 
 

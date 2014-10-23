@@ -19,9 +19,9 @@
                          [GBYSwitch wrap:self.edibleSwitch]]];
 }
 
-- (NSString*)getSubNamespace
+- (NSString*)getNamespace
 {
-    return @"detail-view-controller";
+    return @"shrimp.detail-view-controller";
 }
 
 

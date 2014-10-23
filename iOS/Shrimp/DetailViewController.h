@@ -1,6 +1,6 @@
-#import "BaseViewController.h"
+#import "GBYViewController.h"
 
-@interface DetailViewController : BaseViewController
+@interface DetailViewController : GBYViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;

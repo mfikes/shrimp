@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ED0E172F19F58F29004345D9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E172E19F58F29004345D9 /* MasterViewController.m */; };
 		ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173119F58F41004345D9 /* DetailViewController.m */; };
-		ED0E173519F58F84004345D9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173419F58F84004345D9 /* BaseViewController.m */; };
 		ED26DE9219F57E4400822BB4 /* GBYAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */; };
 		ED26DE9319F57E4400822BB4 /* GBYBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6719F57E4400822BB4 /* GBYBarButtonItem.m */; };
 		ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DE6919F57E4400822BB4 /* GBYButton.m */; };
@@ -61,8 +60,6 @@
 		ED0E172E19F58F29004345D9 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		ED0E173019F58F41004345D9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		ED0E173119F58F41004345D9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		ED0E173319F58F84004345D9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		ED0E173419F58F84004345D9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		ED26DE6419F57E4400822BB4 /* GBYAlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYAlertUtils.h; sourceTree = "<group>"; };
 		ED26DE6519F57E4400822BB4 /* GBYAlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBYAlertUtils.m; sourceTree = "<group>"; };
 		ED26DE6619F57E4400822BB4 /* GBYBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBYBarButtonItem.h; sourceTree = "<group>"; };
@@ -227,8 +224,6 @@
 			children = (
 				EDF7942319F571CF005E8532 /* AppDelegate.h */,
 				EDF7942419F571CF005E8532 /* AppDelegate.m */,
-				ED0E173319F58F84004345D9 /* BaseViewController.h */,
-				ED0E173419F58F84004345D9 /* BaseViewController.m */,
 				ED0E172D19F58F29004345D9 /* MasterViewController.h */,
 				ED0E172E19F58F29004345D9 /* MasterViewController.m */,
 				ED0E173019F58F41004345D9 /* DetailViewController.h */,
@@ -384,7 +379,6 @@
 				EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */,
 				ED26DEAD19F5861800822BB4 /* DatabaseManager.m in Sources */,
 				ED26DE9A19F57E4400822BB4 /* GBYManager.m in Sources */,
-				ED0E173519F58F84004345D9 /* BaseViewController.m in Sources */,
 				ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */,
 				ED26DE9819F57E4400822BB4 /* GBYImageView.m in Sources */,
 				ED26DE9419F57E4400822BB4 /* GBYButton.m in Sources */,

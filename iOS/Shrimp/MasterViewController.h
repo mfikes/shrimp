@@ -1,6 +1,6 @@
-#import "BaseViewController.h"
+#import "GBYViewController.h"
 
-@interface MasterViewController : BaseViewController
+@interface MasterViewController : GBYViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
