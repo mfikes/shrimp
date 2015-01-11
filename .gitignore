@@ -11,3 +11,5 @@ ClojureScript/.idea
 ClojureScript/.repl
 Podfile.lock
 iOS/Pods
+iOS/Shrimp.xcworkspace/xcuserdata
+*.xccheckout
