@@ -1,13 +1,13 @@
+# Clojure 
 ClojureScript/target
 ClojureScript/js
 ClojureScript/out
 ClojureScript/repl
+ClojureScript/.repl
 .nrepl-port
 .lein-repl-history
-iOS/Shrimp.xcodeproj/project.xcworkspace
-iOS/Shrimp.xcodeproj/xcuserdata
+
+# Xcode
+xcuserdata
 shrimp.iml
-ClojureScript/.idea
-ClojureScript/.repl
-iOS/Shrimp.xcworkspace/xcuserdata
 *.xccheckout
