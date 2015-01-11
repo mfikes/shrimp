@@ -20,16 +20,16 @@ Running
 
 The Shrimp project depends on Goby via [CocoaPods](http://cocoapods.org) and [Clojars](https://clojars.org). You do not need to have CocoaPods set up on your Mac; the needed Goby iOS code has been committed to this repo. 
 
-To run Shrimp, first go into the `shrimp/ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file referenced in the iOS project workspace.
+To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file referenced in the iOS project workspace.
 
-Then open `shrimp/iOS/Shrimp.xcworkspace` in Xcode and and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
+Then open `iOS/Shrimp.xcworkspace` in Xcode and and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
 REPL
 ====
 
 To interact with the app via the REPL:
 
-1. Run `lein repl` in the `shrimp/ClojureScript` directory
+1. Run `lein repl` in the `ClojureScript` directory
 2. Run `(simple-brepl)` and wait for indicate that it has started the Weasel server.
 3. Restart the iOS app in the simulator.
 4. Go to the details page for any of the Shrimp
