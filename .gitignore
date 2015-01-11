@@ -9,3 +9,5 @@ iOS/Shrimp.xcodeproj/xcuserdata
 shrimp.iml
 ClojureScript/.idea
 ClojureScript/.repl
+Podfile.lock
+iOS/Pods
