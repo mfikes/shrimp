@@ -1,12 +1,12 @@
 (defproject shrimp "0.1.0-SNAPSHOT"
             :description "Demo project for Goby."
             :dependencies [[org.clojure/clojure "1.6.0"]
-                           [org.clojure/clojurescript "0.0-2511"]
+                           [org.clojure/clojurescript "0.0-2665"]
                            [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                            [goby "0.1.0"]
-                           [weasel "0.4.2"]]
+                           [weasel "0.5.0"]]
             :plugins [[lein-cljsbuild "1.0.3"]
-                      [jarohen/simple-brepl "0.1.2"]]
+                      [jarohen/simple-brepl "0.2.1"]]
             :source-paths ["src"]
             :brepl {:ip "127.0.0.1"}
             :cljsbuild {:builds {:dev
