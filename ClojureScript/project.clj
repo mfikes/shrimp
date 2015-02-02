@@ -14,7 +14,6 @@
                                                   "dev-src"]
                                    :compiler     {:output-to     "js/main.js"
                                                   :optimizations :whitespace
-                                                  :static-fns    false
                                                   :externs       ["externs.js"]
                                                   :pretty-print  true}}
                                  :rel
@@ -22,7 +21,6 @@
                                                   "rel-src"]
                                    :compiler     {:output-to     "js/main.js"
                                                   :optimizations :advanced
-                                                  :static-fns    true
                                                   :externs       ["externs.js"]
                                                   :pretty-print  false
                                                   :pseudo-names  false}}}})
