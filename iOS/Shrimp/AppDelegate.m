@@ -65,24 +65,9 @@ void uncaughtExceptionHandler(NSException *exception) {
     
     // Start up the REPL server
     self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
-    self.replServer = [[ABYServer alloc] init];
-    BOOL success = [self.replServer startListening:50505 forContext:self.contextManager.context];
-    
-    if (success) {
-        // Start up the WebDAV server
-        self.davServer = [[GCDWebDAVServer alloc] initWithUploadDirectory:compilerOutputDirectory.path];
-#if TARGET_IPHONE_SIMULATOR
-        NSString* bonjourName = [NSString stringWithFormat:@"Ambly %@ (%@)", [UIDevice currentDevice].model, [[NSProcessInfo processInfo] hostName]];
-#else
-        NSString* bonjourName = [NSString stringWithFormat:@"Ambly %@", [UIDevice currentDevice].name];
-#endif
-        
-        bonjourName = [self cleanseBonjourName:bonjourName];
-        
-        [GCDWebDAVServer setLogLevel:2]; // Info
-        [self.davServer startWithPort:8080 bonjourName:bonjourName];
-    }
-    
+    self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
+                                 compilerOutputDirectory:compilerOutputDirectory];
+    [self.replServer startListening:50505];
     
     // Override point for customization after application launch.
     

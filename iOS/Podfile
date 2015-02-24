@@ -8,7 +8,3 @@ pod 'Goby', :git => 'https://github.com/mfikes/goby.git'
 #pod 'Ambly', '~> 0.1.0'
 pod 'Ambly', :git => 'https://github.com/omcljs/ambly.git'
 #pod 'Ambly', :path => '~/Documents/Projects/ambly'
-
-# If Ambly specifies GCDWebServer as a transitive dep, then 
-# we can remove this line:
-pod "GCDWebServer/WebDAV", "~> 3.2.2"
