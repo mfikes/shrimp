@@ -153,8 +153,20 @@ void uncaughtExceptionHandler(NSException *exception) {
     // Set up the compiler output directory
     NSURL* compilerOutputDirectory = [[self privateDocumentsDirectory] URLByAppendingPathComponent:@"cljs-out"];
     
-    // Ensure compiler output directory exists
-    [self createDirectoriesUpTo:compilerOutputDirectory];
+    // Ensure private documents directory exists
+    [self createDirectoriesUpTo:[self privateDocumentsDirectory]];
+    
+    // Copy resources from bundle "out" to compilerOutputDirectory
+
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    fileManager.delegate = self;
+    
+    // First blow away old compiler output directory
+    
+    [fileManager removeItemAtPath:compilerOutputDirectory.path error:nil];
+    
+    NSString *outPath = [[NSBundle mainBundle] pathForResource:@"out" ofType:nil];
+    [fileManager copyItemAtPath:outPath toPath:compilerOutputDirectory.path error:nil];
     
     // Start up the REPL server
     self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
@@ -189,6 +201,13 @@ void uncaughtExceptionHandler(NSException *exception) {
     [setDatabaseManagerFn callWithArguments:@[self.databaseManager]];
 
     return YES;
+}
+
+- (BOOL)fileManager:(NSFileManager *)fileManager shouldProceedAfterError:(NSError *)error copyingItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath{
+    if ([error code] == 516) //error code for: The operation couldn’t be completed. File exists
+        return YES;
+    else
+        return NO;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
