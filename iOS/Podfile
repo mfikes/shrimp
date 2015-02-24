@@ -2,3 +2,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 pod 'Goby', '~> 0.1.0'
+#pod 'Ambly', '~> 0.1.0'
+pod 'Ambly', :git => 'https://github.com/omcljs/ambly.git'
+
+# If Ambly specifies GCDWebServer as a transitive dep, then 
+# we can remove this line:
+pod "GCDWebServer/WebDAV", "~> 3.2.2"

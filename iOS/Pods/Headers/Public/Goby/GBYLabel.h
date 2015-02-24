@@ -1,1 +1,0 @@
-../../../Goby/iOS/src/GBYLabel.h

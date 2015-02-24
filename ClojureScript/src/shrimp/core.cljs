@@ -1,6 +1,5 @@
 (ns shrimp.core
-  (:require [shrimp.init]
-            [goby.core :refer [env]]))
+  (:require [goby.core :refer [env]]))
 
 (defn map-keys [f m]
   (reduce-kv (fn [r k v] (assoc r (f k) v)) {} m))
@@ -14,5 +13,4 @@
   (println "ClojureScript initialized: " @env)
 
   (when (:debug-build @env)
-    (shrimp.init/weasel-connect)
     (set! *print-newline* true)))
