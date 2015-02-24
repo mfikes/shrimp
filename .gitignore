@@ -11,3 +11,6 @@ ClojureScript/.repl
 xcuserdata
 shrimp.iml
 *.xccheckout
+Podfile.lock
+iOS/Pods
+iOS/Shrimp.xcworkspace
