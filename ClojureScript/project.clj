@@ -9,7 +9,9 @@
   :source-paths ["src"]
   :cljsbuild {:builds {:dev
                        {:source-paths ["src"]
-                        :compiler     {:optimizations  :none
+                        :compiler     {:output-dir     "out"
+                                       :output-to      "js/main.js"
+                                       :optimizations  :none
                                        :cache-analysis true
                                        :source-map     true}}
                        :rel
