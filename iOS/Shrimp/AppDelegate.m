@@ -3,119 +3,9 @@
 #import "DatabaseManager.h"
 #import "GBYManager.h"
 
-// Copied from Ambly Demo
 #import "ABYServer.h"
 #import "ABYContextManager.h"
 #import "GCDWebDAVServer.h"
-
-
-// START HACKING to override GBYManager
-
-#import "GBYColor.h"
-#import "GBYSoundUtils.h"
-#import "GBYAlertUtils.h"
-
-@interface MyGBYManager : GBYManager
-
--(void)setContext:(JSContext*)context;
-- (void)injectClass:(Class)clazz withGlobalName:(NSString*)name;
-
-@end
-
-@implementation MyGBYManager
-
-- (id)initWithInitFnName:(NSString*)initFnName inNamespace:(NSString*)namespace withContext:(JSContext*)context
-{
-    if (self = [super init]) {
-        
-        [self setContext:context];
-        
-        [self injectClass:[GBYColor class] withGlobalName:@"GBYColor"];
-        [self injectClass:[GBYSoundUtils class] withGlobalName:@"GBYSoundUtils"];
-        [self injectClass:[GBYAlertUtils class] withGlobalName:@"GBYAlertUtils"];
-        
-        //NSAssert(_context != nil, @"The JavaScript context should not be nil");
-        
-        // Setup CLOSURE_IMPORT_SCRIPT
-        [context evaluateScript:@"CLOSURE_IMPORT_SCRIPT = function(src) { require('goog/' + src); return true; }"];
-        
-        // Load goog base
-        NSString *basePath = [[NSBundle mainBundle] pathForResource:@"out/goog/base" ofType:@"js"];
-        NSString *baseScriptString = [NSString stringWithContentsOfFile:basePath encoding:NSUTF8StringEncoding error:nil];
-        [context evaluateScript:baseScriptString];
-        
-        // Load the deps file
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
-        NSString *scriptString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        NSAssert(scriptString != nil, @"The JavaScript text could not be loaded");
-        [context evaluateScript:scriptString];
-        
-        [context evaluateScript:@"goog.isProvided_ = function(x) { return false; };"];
-        
-        [context evaluateScript:@"goog.require = function (name) { return CLOSURE_IMPORT_SCRIPT(goog.dependencies_.nameToPath[name]); };"];
-        
-        [context evaluateScript:@"goog.require('cljs.core');"];
-        
-        // redef goog.require to track loaded libs
-        [context evaluateScript:@"cljs.core._STAR_loaded_libs_STAR_ = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ['cljs.core',null], null), null);\n"
-         "\n"
-         "goog.require = (function (name,reload){\n"
-         "   if(cljs.core.truth_((function (){var or__4112__auto__ = !(cljs.core.contains_QMARK_.call(null,cljs.core._STAR_loaded_libs_STAR_,name));\n"
-         "       if(or__4112__auto__){\n"
-         "           return or__4112__auto__;\n"
-         "       } else {\n"
-         "           return reload;\n"
-         "       }\n"
-         "   })())){\n"
-         "       cljs.core._STAR_loaded_libs_STAR_ = cljs.core.conj.call(null,(function (){var or__4112__auto__ = cljs.core._STAR_loaded_libs_STAR_;\n"
-         "           if(cljs.core.truth_(or__4112__auto__)){\n"
-         "               return or__4112__auto__;\n"
-         "           } else {\n"
-         "               return cljs.core.PersistentHashSet.EMPTY;\n"
-         "           }\n"
-         "       })(),name);\n"
-         "       \n"
-         "       return CLOSURE_IMPORT_SCRIPT((goog.dependencies_.nameToPath[name]));\n"
-         "   } else {\n"
-         "       return null;\n"
-         "   }\n"
-         "});"];
-        
-        [context evaluateScript:@"goog.require('shrimp.core');"];
-        
-        // Need to require these as they are not referenced by shrimp.core (munging also needed)
-        [context evaluateScript:@"goog.require('shrimp.master_view_controller');"];
-        [context evaluateScript:@"goog.require('shrimp.detail_view_controller');"];
-        
-        JSValue* initFn = [self getValue:initFnName inNamespace:namespace];
-        
-        NSAssert(!initFn.isUndefined, @"Could not find the app init function");
-        
-#ifdef DEBUG
-        BOOL debugBuild = YES;
-#else
-        BOOL debugBuild = NO;
-#endif
-        
-#ifdef TARGET_IPHONE_SIMULATOR
-        BOOL targetSimulator = YES;
-#else
-        BOOL targetSimulator = NO;
-#endif
-        
-        [initFn callWithArguments:@[@{@"debug-build": @(debugBuild),
-                                      @"target-simulator": @(targetSimulator),
-                                      @"user-interface-idiom": (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"iPad": @"iPhone")}]];
-        
-    }
-    
-    return self;
-}
-
-@end
-
-
-// END HACKING to override GBYManager
 
 @interface AppDelegate ()
 
@@ -134,10 +24,67 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 @implementation AppDelegate
 
+-(void)bootstrapContext:(JSContext*)context
+{
+    // Setup CLOSURE_IMPORT_SCRIPT
+    [context evaluateScript:@"CLOSURE_IMPORT_SCRIPT = function(src) { require('goog/' + src); return true; }"];
+    
+    // TODO there is a path here assuming "out"
+    
+    // Load goog base
+    NSString *basePath = [[NSBundle mainBundle] pathForResource:@"out/goog/base" ofType:@"js"];
+    NSString *baseScriptString = [NSString stringWithContentsOfFile:basePath encoding:NSUTF8StringEncoding error:nil];
+    [context evaluateScript:baseScriptString];
+    
+    // Load the deps file
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+    NSString *scriptString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSAssert(scriptString != nil, @"The JavaScript text could not be loaded");
+    [context evaluateScript:scriptString];
+    
+    [context evaluateScript:@"goog.isProvided_ = function(x) { return false; };"];
+    
+    [context evaluateScript:@"goog.require = function (name) { return CLOSURE_IMPORT_SCRIPT(goog.dependencies_.nameToPath[name]); };"];
+    
+    [context evaluateScript:@"goog.require('cljs.core');"];
+    
+    // redef goog.require to track loaded libs
+    [context evaluateScript:@"cljs.core._STAR_loaded_libs_STAR_ = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, ['cljs.core',null], null), null);\n"
+     "\n"
+     "goog.require = (function (name,reload){\n"
+     "   if(cljs.core.truth_((function (){var or__4112__auto__ = !(cljs.core.contains_QMARK_.call(null,cljs.core._STAR_loaded_libs_STAR_,name));\n"
+     "       if(or__4112__auto__){\n"
+     "           return or__4112__auto__;\n"
+     "       } else {\n"
+     "           return reload;\n"
+     "       }\n"
+     "   })())){\n"
+     "       cljs.core._STAR_loaded_libs_STAR_ = cljs.core.conj.call(null,(function (){var or__4112__auto__ = cljs.core._STAR_loaded_libs_STAR_;\n"
+     "           if(cljs.core.truth_(or__4112__auto__)){\n"
+     "               return or__4112__auto__;\n"
+     "           } else {\n"
+     "               return cljs.core.PersistentHashSet.EMPTY;\n"
+     "           }\n"
+     "       })(),name);\n"
+     "       \n"
+     "       return CLOSURE_IMPORT_SCRIPT((goog.dependencies_.nameToPath[name]));\n"
+     "   } else {\n"
+     "       return null;\n"
+     "   }\n"
+     "});"];
+
+}
+
+-(void)requireAppNamespaces:(JSContext*)context
+{
+    [context evaluateScript:@"goog.require('shrimp.core');"];
+    
+    // Need to require these as they are not referenced by shrimp.core (munging also needed)
+    [context evaluateScript:@"goog.require('shrimp.master_view_controller');"];
+    [context evaluateScript:@"goog.require('shrimp.detail_view_controller');"];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
     
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
@@ -192,7 +139,11 @@ void uncaughtExceptionHandler(NSException *exception) {
     // Override point for customization after application launch.
     
     NSLog(@"Initializing ClojureScript");
-    self.cljsManager = [[MyGBYManager alloc] initWithInitFnName:@"init!" inNamespace:@"shrimp.core" withContext:self.contextManager.context];
+    
+    [self bootstrapContext:self.contextManager.context];
+    [self requireAppNamespaces:self.contextManager.context];
+    
+    self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!" inNamespace:@"shrimp.core" withContext:self.contextManager.context];
     
     NSLog(@"Initializing database");
     self.databaseManager = [[DatabaseManager alloc] init];

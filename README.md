@@ -18,9 +18,11 @@ This project illustrates how UIKit elements are injected into ClojureScript and 
 Running
 =======
 
-The Shrimp project depends on Goby via [CocoaPods](http://cocoapods.org) and [Clojars](https://clojars.org).
+Make clones of [Ambly](https://github.com/omcljs/ambly) master and [Goby](https://github.com/mfikes/goby) master.  
 
-The Shrimp project also depends on the [Ambly](https://github.com/omcljs/ambly) REPL. The Objective-C portion of Ambly dependency is via CocoaPods. Currently, the Clojure portion of Ambly needs to be installed locally as a SNAPSHOT (to do this, clone the Ambly project, go into its `ambly/Clojure` directory and do a `lein install`.
+In the Ambly project, go into `ambly/Clojure` and do a `lein install`.
+
+In the Goby project, go into `goby/ClojureScript` and do a `lein install`.
 
 To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
