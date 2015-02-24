@@ -1,4 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
-pod 'Goby', '~> 0.1.0'
+#pod 'Goby', '~> 0.1.0'
+pod 'Goby', :git => 'https://github.com/mfikes/goby.git'
+#pod 'Goby', :path => '~/Documents/Projects/goby'
+
+#pod 'Ambly', '~> 0.1.0'
+pod 'Ambly', :git => 'https://github.com/omcljs/ambly.git'
+#pod 'Ambly', :path => '~/Documents/Projects/ambly'
