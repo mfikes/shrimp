@@ -18,27 +18,32 @@ This project illustrates how UIKit elements are injected into ClojureScript and 
 Running
 =======
 
-The Shrimp project depends on Goby via [CocoaPods](http://cocoapods.org) and [Clojars](https://clojars.org). You do not need to have CocoaPods set up on your Mac; the needed Goby iOS code has been committed to this repo. 
+The Shrimp project depends on Goby via [CocoaPods](http://cocoapods.org) and [Clojars](https://clojars.org).
 
-To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file referenced in the iOS project workspace.
+The Shrimp project also depends on the [Ambly](https://github.com/omcljs/ambly) REPL. The Objective-C portion of Ambly dependency is via CocoaPods. Currently, the Clojure portion of Ambly needs to be installed locally as a SNAPSHOT (to do this, clone the Ambly project, go into its `ambly/Clojure` directory and do a `lein install`.
 
-Then open `iOS/Shrimp.xcworkspace` in Xcode and and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
+To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
+
+To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file and `out` directory referenced in the iOS project workspace.
+
+Then open `iOS/Shrimp.xcworkspace` in Xcode and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
 REPL
 ====
 
-To interact with the app via the REPL:
+To interact with the app via the Ambly REPL:
 
-1. Run `lein repl` in the `ClojureScript` directory
-2. Run `(simple-brepl)` and wait for it to indicate that it has started the Weasel server.
-3. Restart the iOS app in the simulator.
-4. Go to the details page for any of the Shrimp
-5. In the REPL, switch to the namespace for that view controller using `(in-ns 'shrimp.detail-view-controller)`.
+1. Run `script/jscrepljs` in the `ClojureScript` directory
+2. Choose `[1] iPhone Simulator (<computer name>)`.
+3. Make sure that the master view is being shown in the app. (The view listing various shrimp names).
+4. In the REPL, do `(require 'shrimp.detail-view-controller)`
+5. Then `(in-ns 'shrimp.detail-view-controller)`.
+6. In the app, tap on one of the shrimp names to go to a detail view.
 6. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello")`.
 
-You can also establish a REPL over TCP/IP with a test device. To do this, modify `:brepl {:ip "127.0.0.1”}` in `project.clj` and `(ws-repl/connect "ws://127.0.0.1:9001”)` in the `dev` version of `shrimp.init.weasel-connect` to reflect your Mac’s IP address.
+You can also establish a REPL with a test device; simply follow the same steps but run the app on a device and choose the device when starting the REPL.
 
-Here is what this all looks like in [Cursive](https://cursiveclojure.com):
+Here is what this all looks like in [Cursive](https://cursiveclojure.com) (using a previous copy that worked with Weasel):
 
 ![](https://raw.githubusercontent.com/mfikes/shrimp/master/devenv.png)
 
