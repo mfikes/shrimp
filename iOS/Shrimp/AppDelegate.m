@@ -5,14 +5,11 @@
 
 #import "ABYServer.h"
 #import "ABYContextManager.h"
-#import "GCDWebDAVServer.h"
 
 @interface AppDelegate ()
 
-// Copied from Ambly Demo
 @property (strong, nonatomic) ABYContextManager* contextManager;
 @property (strong, nonatomic) ABYServer* replServer;
-@property (strong, nonatomic) GCDWebDAVServer* davServer;
 
 @end
 
@@ -119,9 +116,6 @@ void uncaughtExceptionHandler(NSException *exception) {
     // Saves changes in the application's managed object context before the application terminates.
 }
 
-
-// HELPERS COPIED VERBATIM FROM Ambly Demo
-
 - (NSURL *)privateDocumentsDirectory
 {
     NSURL *libraryDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
@@ -143,23 +137,5 @@ void uncaughtExceptionHandler(NSException *exception) {
         }
     }
 }
-
-- (NSString*)cleanseBonjourName:(NSString*)bonjourName
-{
-    // Bonjour names  cannot contain dots
-    bonjourName = [bonjourName stringByReplacingOccurrencesOfString:@"." withString:@"-"];
-    // Bonjour names cannot be longer than 63 characters in UTF-8
-    
-    int upperBound = 63;
-    while (strlen(bonjourName.UTF8String) > 63) {
-        NSRange stringRange = {0, upperBound};
-        stringRange = [bonjourName rangeOfComposedCharacterSequencesForRange:stringRange];
-        bonjourName = [bonjourName substringWithRange:stringRange];
-        upperBound--;
-    }
-    return bonjourName;
-}
-
-// END HELPERS COPIED VERBATIM FROM Ambly Demo
 
 @end
