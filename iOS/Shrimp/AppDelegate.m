@@ -64,7 +64,10 @@ void uncaughtExceptionHandler(NSException *exception) {
     self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
     self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
                                  compilerOutputDirectory:compilerOutputDirectory];
-    [self.replServer startListening:50505];
+    BOOL success = [self.replServer startListening];
+    if (!success) {
+        NSLog(@"Failed to start REPL server.");
+    }
     
     // Override point for customization after application launch.
     
