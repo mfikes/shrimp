@@ -33,10 +33,9 @@ To interact with the app via the Ambly REPL:
 
 1. Run `script/jscrepljs` in the `ClojureScript` directory
 2. Choose `[1] Shrimp on iPhone Simulator (<computer name>)`.
-3. Make sure that the master view is being shown in the app. (The view listing various shrimp names).
-4. In the REPL, do `(require 'shrimp.detail-view-controller)`
-5. Then `(in-ns 'shrimp.detail-view-controller)`.
-6. In the app, tap on one of the shrimp names to go to a detail view.
+3. In the REPL, do `(require 'shrimp.detail-view-controller)`
+4. Then `(in-ns 'shrimp.detail-view-controller)`.
+5. In the app, tap on one of the shrimp names to go to a detail view.
 6. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello")`.
 
 You can also establish a REPL with a test device; simply follow the same steps but run the app on a device and choose the device when starting the REPL.
