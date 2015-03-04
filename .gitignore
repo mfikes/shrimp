@@ -14,3 +14,4 @@ shrimp.iml
 Podfile.lock
 iOS/Pods
 iOS/Shrimp.xcworkspace
+ClojureScript/.idea
