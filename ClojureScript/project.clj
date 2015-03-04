@@ -7,6 +7,7 @@
                  [org.omcljs/ambly "0.1.0-SNAPSHOT"]]
   :plugins [[lein-cljsbuild "1.0.5"]]
   :source-paths ["src"]
+  :clean-targets ["js" "out"]
   :cljsbuild {:builds {:dev
                        {:source-paths ["src"]
                         :compiler     {:output-dir     "out"
