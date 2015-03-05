@@ -59,25 +59,15 @@ void uncaughtExceptionHandler(NSException *exception) {
     
     NSString *outPath = [[NSBundle mainBundle] pathForResource:@"out" ofType:nil];
     [fileManager copyItemAtPath:outPath toPath:compilerOutputDirectory.path error:nil];
-    
-    // Start up the REPL server
-    self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
-    self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
-                                 compilerOutputDirectory:compilerOutputDirectory];
-    BOOL success = [self.replServer startListening];
-    if (!success) {
-        NSLog(@"Failed to start REPL server.");
-    }
-    
-    // Override point for customization after application launch.
-    
+
     NSLog(@"Initializing ClojureScript");
+    self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
     
     [self.contextManager bootstrapWithDepsFilePath:[[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"]
                                       googBasePath:[[NSBundle mainBundle] pathForResource:@"out/goog/base" ofType:@"js"]];
     
     [self requireAppNamespaces:self.contextManager.context];
-    
+
     self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!" inNamespace:@"shrimp.core" withContext:self.contextManager.context];
     
     NSLog(@"Initializing database");
@@ -86,6 +76,14 @@ void uncaughtExceptionHandler(NSException *exception) {
     JSValue* setDatabaseManagerFn = [self.cljsManager getValue:@"set-database-manager!" inNamespace:@"shrimp.database"];
     [setDatabaseManagerFn callWithArguments:@[self.databaseManager]];
 
+    // Start up the REPL server
+    self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
+                                 compilerOutputDirectory:compilerOutputDirectory];
+    BOOL success = [self.replServer startListening];
+    if (!success) {
+        NSLog(@"Failed to start REPL server.");
+    }
+    
     return YES;
 }
 
