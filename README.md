@@ -26,6 +26,8 @@ To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbui
 
 Then open `iOS/Shrimp.xcworkspace` in Xcode and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
+<center><img src="http://blog.fikesfarm.com/img/shrimp.png" style="width: 200px;"/></center>
+
 REPL
 ====
 
