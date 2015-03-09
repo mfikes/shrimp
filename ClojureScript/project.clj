@@ -11,6 +11,7 @@
   :cljsbuild {:builds {:dev
                        {:source-paths ["src"]
                         :compiler     {:output-dir     "out"
+                                       :optimizations  :none
                                        :output-to      "js/main.js"}}
                        :rel
                        {:source-paths ["src"]
