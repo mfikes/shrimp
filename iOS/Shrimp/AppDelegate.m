@@ -3,8 +3,9 @@
 #import "DatabaseManager.h"
 #import "GBYManager.h"
 
-#import "ABYServer.h"
+#ifdef DEBUG
 #import "ABYContextManager.h"
+#import "ABYServer.h"
 
 @interface AppDelegate ()
 
@@ -12,6 +13,7 @@
 @property (strong, nonatomic) ABYServer* replServer;
 
 @end
+#endif
 
 void uncaughtExceptionHandler(NSException *exception) {
     NSLog(@"CRASH: %@", exception);
@@ -20,6 +22,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 @implementation AppDelegate
 
+#ifdef DEBUG
 -(void)requireAppNamespaces:(JSContext*)context
 {
     [context evaluateScript:@"goog.require('shrimp.core');"];
@@ -28,6 +31,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [context evaluateScript:@"goog.require('shrimp.master_view_controller');"];
     [context evaluateScript:@"goog.require('shrimp.detail_view_controller');"];
 }
+#endif
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -39,9 +43,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     // can do this unconditionally.
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
-    // All of the setup below is for dev.
-    // For release the app would load files from shipping bundle.
-    
+#ifdef DEBUG
     // Set up the compiler output directory
     NSURL* compilerOutputDirectory = [[self privateDocumentsDirectory] URLByAppendingPathComponent:@"cljs-out"];
     
@@ -54,21 +56,32 @@ void uncaughtExceptionHandler(NSException *exception) {
     fileManager.delegate = self;
     
     // First blow away old compiler output directory
-    
     [fileManager removeItemAtPath:compilerOutputDirectory.path error:nil];
     
+    // Copy files from bundle to compiler output driectory
     NSString *outPath = [[NSBundle mainBundle] pathForResource:@"out" ofType:nil];
     [fileManager copyItemAtPath:outPath toPath:compilerOutputDirectory.path error:nil];
 
     NSLog(@"Initializing ClojureScript");
     self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
+
     
-    [self.contextManager bootstrapWithDepsFilePath:[[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"]
-                                      googBasePath:[[NSBundle mainBundle] pathForResource:@"out/goog/base" ofType:@"js"]];
+    NSURL* googDirectory = [compilerOutputDirectory URLByAppendingPathComponent:@"goog"];
+    
+    [self.contextManager bootstrapWithDepsFilePath:[[compilerOutputDirectory URLByAppendingPathComponent:@"main" isDirectory:NO] URLByAppendingPathExtension:@"js"].path
+                                      googBasePath:[[googDirectory URLByAppendingPathComponent:@"base" isDirectory:NO] URLByAppendingPathExtension:@"js"].path];
     
     [self requireAppNamespaces:self.contextManager.context];
 
-    self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!" inNamespace:@"shrimp.core" withContext:self.contextManager.context];
+    self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!"
+                                                  inNamespace:@"shrimp.core"
+                                                  withContext:self.contextManager.context
+                                            loadingJavaScript:nil];
+#else
+    self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!"
+                                                  inNamespace:@"shrimp.core"
+                                            loadingJavaScript:[[NSBundle mainBundle] pathForResource:@"out/main" ofType:@"js"]];
+#endif
     
     NSLog(@"Initializing database");
     self.databaseManager = [[DatabaseManager alloc] init];
@@ -76,6 +89,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     JSValue* setDatabaseManagerFn = [self.cljsManager getValue:@"set-database-manager!" inNamespace:@"shrimp.database"];
     [setDatabaseManagerFn callWithArguments:@[self.databaseManager]];
 
+#ifdef DEBUG
     // Start up the REPL server
     self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
                                  compilerOutputDirectory:compilerOutputDirectory];
@@ -83,6 +97,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     if (!success) {
         NSLog(@"Failed to start REPL server.");
     }
+#endif
     
     return YES;
 }

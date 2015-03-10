@@ -13,7 +13,6 @@
 		ED26DEAD19F5861800822BB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEAC19F5861800822BB4 /* DatabaseManager.m */; };
 		ED26DEB019F5869700822BB4 /* BaseDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */; };
 		ED26DEB319F5886900822BB4 /* Shrimp.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEB219F5886900822BB4 /* Shrimp.m */; };
-		ED873C1D1A9C0E820013D4D6 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = ED26DEB419F58BA000822BB4 /* main.js */; };
 		ED873C1F1A9C0FEC0013D4D6 /* out in Resources */ = {isa = PBXBuildFile; fileRef = ED873C1E1A9C0FEC0013D4D6 /* out */; };
 		EDF7942219F571CF005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942119F571CF005E8532 /* main.m */; };
 		EDF7942519F571CF005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942419F571CF005E8532 /* AppDelegate.m */; };
@@ -48,7 +47,6 @@
 		ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDatabaseManager.m; sourceTree = "<group>"; };
 		ED26DEB119F5886900822BB4 /* Shrimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shrimp.h; sourceTree = "<group>"; };
 		ED26DEB219F5886900822BB4 /* Shrimp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shrimp.m; sourceTree = "<group>"; };
-		ED26DEB419F58BA000822BB4 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = ../ClojureScript/js/main.js; sourceTree = "<group>"; };
 		ED873C1E1A9C0FEC0013D4D6 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; name = out; path = ../ClojureScript/out; sourceTree = "<group>"; };
 		EDF7941C19F571CF005E8532 /* Shrimp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7942019F571CF005E8532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		EDF7941319F571CF005E8532 = {
 			isa = PBXGroup;
 			children = (
-				ED26DEB419F58BA000822BB4 /* main.js */,
 				ED873C1E1A9C0FEC0013D4D6 /* out */,
 				EDF7941E19F571CF005E8532 /* Shrimp */,
 				EDF7943B19F571CF005E8532 /* ShrimpTests */,
@@ -258,7 +255,6 @@
 				EDF7943319F571CF005E8532 /* LaunchScreen.xib in Resources */,
 				ED873C1F1A9C0FEC0013D4D6 /* out in Resources */,
 				EDF7943019F571CF005E8532 /* Images.xcassets in Resources */,
-				ED873C1D1A9C0E820013D4D6 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
