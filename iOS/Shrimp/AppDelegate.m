@@ -63,8 +63,13 @@ void uncaughtExceptionHandler(NSException *exception) {
     [fileManager copyItemAtPath:outPath toPath:compilerOutputDirectory.path error:nil];
 
     NSLog(@"Initializing ClojureScript");
-    self.contextManager = [[ABYContextManager alloc] initWithCompilerOutputDirectory:compilerOutputDirectory];
-
+    self.contextManager = [[ABYContextManager alloc] initWithContext:[[JSContext alloc] init]
+                                             compilerOutputDirectory:compilerOutputDirectory];
+    [self.contextManager setupGlobalContext];
+    [self.contextManager setUpExceptionLogging];
+    [self.contextManager setUpConsoleLog];
+    [self.contextManager setUpTimerFunctionality];
+    [self.contextManager setUpAmblyImportScript];
     
     NSURL* googDirectory = [compilerOutputDirectory URLByAppendingPathComponent:@"goog"];
     
