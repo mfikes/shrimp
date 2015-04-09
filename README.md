@@ -22,7 +22,7 @@ Make a clone of [Ambly](https://github.com/omcljs/ambly) master. In the Ambly pr
 
 To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
-To run Shrimp, first go into the `ClojureScript` directory and run `mvn compile`. This will produce the `main.js` file and `out` directory referenced in the iOS project workspace.
+To run Shrimp, first go into the `ClojureScript` directory and run `mvn compile`. This will produce the `main.js` file and `out` directory referenced in the iOS project workspace. *Note: As a cool aside, this uses the ClojureScript Quick Start `cljs.jar` along with a small bit of `mvn` to manage deps. No `lein cljsbuild`!*
 
 Then open `iOS/Shrimp.xcworkspace` in Xcode and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
