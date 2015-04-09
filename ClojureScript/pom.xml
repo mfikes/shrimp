@@ -15,6 +15,11 @@
       <url>http://clojars.org/repo</url>
     </repository>
   </repositories>
+  <properties>
+    <clojurescript.major.version>0</clojurescript.major.version>
+    <clojurescript.minor.version>0</clojurescript.minor.version>
+    <clojurescript.build.number>3190</clojurescript.build.number>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.clojure</groupId>
@@ -46,8 +51,8 @@
                     <goal>wget</goal>
                 </goals>
                 <configuration>
-                    <url>https://github.com/clojure/clojurescript/releases/download/r3178/cljs.jar</url>
-                    <outputFileName>cljs-0.0-3178.jar</outputFileName>
+                    <url>https://github.com/clojure/clojurescript/releases/download/r${clojurescript.build.number}/cljs.jar</url>
+                    <outputFileName>cljs-${clojurescript.major.version}.${clojurescript.minor.version}-${clojurescript.build.number}.jar</outputFileName>
                 </configuration>
             </execution>
         </executions>
