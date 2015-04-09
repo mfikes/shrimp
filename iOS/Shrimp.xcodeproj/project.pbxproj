@@ -47,7 +47,7 @@
 		ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDatabaseManager.m; sourceTree = "<group>"; };
 		ED26DEB119F5886900822BB4 /* Shrimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shrimp.h; sourceTree = "<group>"; };
 		ED26DEB219F5886900822BB4 /* Shrimp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shrimp.m; sourceTree = "<group>"; };
-		ED873C1E1A9C0FEC0013D4D6 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; name = out; path = ../ClojureScript/out; sourceTree = "<group>"; };
+		ED873C1E1A9C0FEC0013D4D6 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; name = out; path = ../ClojureScript/target/out; sourceTree = "<group>"; };
 		EDF7941C19F571CF005E8532 /* Shrimp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7942019F571CF005E8532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF7942119F571CF005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };

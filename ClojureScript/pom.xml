@@ -69,7 +69,7 @@
           <mainClass>clojure.main</mainClass>
           <arguments>
             <argument>-e</argument>
-            <argument>(require 'cljs.closure) (cljs.closure/build "src" {:output-to "out/main.js"})</argument>
+            <argument>(require 'cljs.closure) (cljs.closure/build "src" {:output-to "target/out/main.js" :output-dir "target/out"})</argument>
           </arguments>
         </configuration>
       </plugin>
