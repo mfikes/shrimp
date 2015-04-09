@@ -99,6 +99,9 @@
                 <argument>-e</argument>
                 <argument>(require '[cljs.repl :as repl] '[ambly.repl.jsc :as jsc]) (repl/repl (jsc/repl-env))</argument>
               </arguments>
+              <additionalClasspathElements>
+                <additionalClasspathElement>src</additionalClasspathElement>
+              </additionalClasspathElements>
             </configuration>
           </plugin>
         </plugins>
