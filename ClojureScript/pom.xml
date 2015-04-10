@@ -37,62 +37,66 @@
       <version>0.1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
-	<build>
+  <build>
     <plugins>
       <plugin>
         <groupId>com.googlecode.maven-download-plugin</groupId>
         <artifactId>download-maven-plugin</artifactId>
         <version>1.2.1</version>
         <executions>
-            <execution>
-                <id>install-cljs</id>
-                <phase>initialize</phase>
-                <goals>
-                    <goal>wget</goal>
-                </goals>
-                <configuration>
-                    <url>https://github.com/clojure/clojurescript/releases/download/r${clojurescript.build.number}/cljs.jar</url>
-                    <outputFileName>cljs-${clojurescript.major.version}.${clojurescript.minor.version}-${clojurescript.build.number}.jar</outputFileName>
-                </configuration>
-            </execution>
+          <execution>
+            <id>install-cljs</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>wget</goal>
+            </goals>
+            <configuration>
+              <url>https://github.com/clojure/clojurescript/releases/download/r${clojurescript.build.number}/cljs.jar</url>
+              <outputFileName>cljs-${clojurescript.major.version}.${clojurescript.minor.version}-${clojurescript.build.number}.jar</outputFileName>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
     </plugins>
-	</build>
+  </build>
   <profiles>
-		<profile>
-			<id>dev</id>
-		  <build>
-				<defaultGoal>compile</defaultGoal>
-		    <plugins>
-		      <plugin>
-		        <groupId>org.codehaus.mojo</groupId>
-		        <artifactId>exec-maven-plugin</artifactId>
-		        <version>1.4.0</version>
-		        <executions>
-		          <execution>
-		            <id>compile</id>
-		            <phase>compile</phase>
-		            <goals>
-		              <goal>java</goal>
-		            </goals>
-		          </execution>
-		        </executions>
-		        <configuration>
-		          <mainClass>clojure.main</mainClass>
-		          <arguments>
-		            <argument>-e</argument>
-		            <argument>(require 'cljs.closure) (cljs.closure/build "src" {:output-to "target/out/main.js" :output-dir "target/out"})</argument>
-		          </arguments>
-		        </configuration>
-		      </plugin>
-		    </plugins>
-		  </build>
-		</profile>
+    <profile>
+      <id>dev</id>
+      <build>
+        <defaultGoal>compile</defaultGoal>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.4.0</version>
+            <executions>
+              <execution>
+                <id>compile</id>
+                <phase>compile</phase>
+                <goals>
+                  <goal>java</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <mainClass>clojure.main</mainClass>
+              <arguments>
+                <argument>-e</argument>
+                <argument>
+                  (require 'cljs.closure)
+                  (cljs.closure/build "src" {:output-to "target/out/main.js" 
+                                             :output-dir "target/out"})
+                </argument>
+              </arguments>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
     <profile>
       <id>rel</id>
       <build>
-				<defaultGoal>compile</defaultGoal>
+        <defaultGoal>compile</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
@@ -111,7 +115,15 @@
               <mainClass>clojure.main</mainClass>
               <arguments>
                 <argument>-e</argument>
-                <argument>(require 'cljs.closure 'clojure.java.io) (clojure.java.io/make-parents "target/out/main.js") (cljs.closure/build "src" {:output-to "target/out/main.js" :output-dir "target/compiler-out" :optimizations :advanced :externs ["externs.js"]}) (System/exit 0)</argument>
+                <argument>
+                  (require 'cljs.closure 'clojure.java.io)
+                  (clojure.java.io/make-parents "target/out/main.js")
+                  (cljs.closure/build "src" {:output-to "target/out/main.js" 
+                                             :output-dir "target/compiler-out" 
+                                             :optimizations :advanced
+                                             :externs ["externs.js"]}) 
+                  (System/exit 0)
+                </argument>
               </arguments>
             </configuration>
           </plugin>
@@ -121,7 +133,7 @@
     <profile>
       <id>repl</id>
       <build>
-				<defaultGoal>compile</defaultGoal>
+        <defaultGoal>compile</defaultGoal>
         <plugins>
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
@@ -140,7 +152,11 @@
               <mainClass>clojure.main</mainClass>
               <arguments>
                 <argument>-e</argument>
-                <argument>(require '[cljs.repl :as repl] '[ambly.repl.jsc :as jsc]) (repl/repl (jsc/repl-env))</argument>
+                <argument>
+                  (require '[cljs.repl :as repl]
+                           '[ambly.repl.jsc :as jsc]) 
+                  (repl/repl (jsc/repl-env))
+                </argument>
               </arguments>
               <additionalClasspathElements>
                 <additionalClasspathElement>src</additionalClasspathElement>
