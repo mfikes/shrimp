@@ -111,7 +111,7 @@
               <mainClass>clojure.main</mainClass>
               <arguments>
                 <argument>-e</argument>
-                <argument>(require 'cljs.closure) (cljs.closure/build "src" {:output-to "target/out/main.js" :output-dir "target/out" :optimizations :advanced :externs ["externs.js"]})</argument>
+                <argument>(require 'cljs.closure 'clojure.java.io) (clojure.java.io/make-parents "target/out/main.js") (cljs.closure/build "src" {:output-to "target/out/main.js" :output-dir "target/compiler-out" :optimizations :advanced :externs ["externs.js"]}) (System/exit 0)</argument>
               </arguments>
             </configuration>
           </plugin>
