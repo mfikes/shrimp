@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
-pod 'Goby', '~> 0.3.0'
+pod 'Goby', '~> 0.3.1'
 #pod 'Goby', :git => 'https://github.com/mfikes/goby.git'
 #pod 'Goby', :path => '~/Documents/Projects/goby'
 

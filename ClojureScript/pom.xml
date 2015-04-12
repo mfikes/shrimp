@@ -18,7 +18,7 @@
   <properties>
     <clojurescript.major.version>0</clojurescript.major.version>
     <clojurescript.minor.version>0</clojurescript.minor.version>
-    <clojurescript.build.number>3190</clojurescript.build.number>
+    <clojurescript.build.number>3196</clojurescript.build.number>
   </properties>
   <dependencies>
     <dependency>
@@ -29,7 +29,7 @@
     <dependency>
       <groupId>goby</groupId>
       <artifactId>goby</artifactId>
-      <version>0.3.0</version>
+      <version>0.3.1</version>
     </dependency>
     <dependency>
       <groupId>org.omcljs</groupId>

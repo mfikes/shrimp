@@ -1,6 +1,7 @@
 (ns shrimp.master-view-controller
   (:require [goby.core :refer [reify-fetched-results-controller-delegate TableViewDataSource
                                table-view-cell-editing-styles TableViewDelegate]]
+            [shrimp.detail-view-controller]
             [shrimp.database :refer [database-manager]])
   (:require-macros [goby.macros :refer [defui reify]]))
 
