@@ -11,9 +11,11 @@ This is a sample project illustrating the use of Goby, which is some glue code f
 This repo is really two projects in one:
 
 1. An iOS app which contains the Storyboards and which loads the compiled JavaScript.
-2. A ClojureScript Leiningen project which contains implementations for the view controllers.
+2. A ClojureScript project which contains implementations for the view controllers.
 
 This project illustrates how UIKit elements are injected into ClojureScript and how Objective-C protocols such as `UITableViewDataSource` are implemented. It also shows how CoreData can be used, injecting (mutable) CoreData objects into ClojureScript.
+
+[This blog post](http://blog.fikesfarm.com/posts/2015-03-05-ambly-app-bootstrapping.html) delves into more the detail on how the Ambly REPL is integrated into Shrimp.
 
 Running
 =======
