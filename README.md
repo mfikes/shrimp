@@ -15,7 +15,7 @@ This repo is really two projects in one:
 
 This project illustrates how UIKit elements are injected into ClojureScript and how Objective-C protocols such as `UITableViewDataSource` are implemented. It also shows how CoreData can be used, injecting (mutable) CoreData objects into ClojureScript.
 
-[This blog post](http://blog.fikesfarm.com/posts/2015-03-05-ambly-app-bootstrapping.html) delves into more the detail on how the Ambly REPL is integrated into Shrimp.
+[This blog post](http://blog.fikesfarm.com/posts/2015-03-05-ambly-app-bootstrapping.html) delves into more of the detail on how the Ambly REPL is integrated into Shrimp.
 
 Running
 =======
