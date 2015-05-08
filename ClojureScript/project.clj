@@ -10,12 +10,12 @@
   :clean-targets ["target" "out"]
   :cljsbuild {:builds {:dev
                        {:source-paths ["src"]
-                        :compiler     {:output-to      "out/main.js"
-                                       :output-dir     "out"
+                        :compiler     {:output-to      "target/out/main.js"
+                                       :output-dir     "target/out"
                                        :optimizations  :none}}
                        :rel
                        {:source-paths ["src"]
-                        :compiler     {:output-to     "out/main.js"
+                        :compiler     {:output-to     "target/out/main.js"
                                        :optimizations :advanced
                                        :externs       ["externs.js"]
                                        :pretty-print  false
