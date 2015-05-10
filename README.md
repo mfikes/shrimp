@@ -22,7 +22,7 @@ Running
 
 To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
-To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file and `target\out` directory referenced in the iOS project workspace. 
+To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file and `target/out` directory referenced in the iOS project workspace. 
 
 Then open `iOS/Shrimp.xcworkspace` in Xcode and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
