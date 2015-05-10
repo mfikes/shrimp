@@ -20,8 +20,6 @@ This project illustrates how UIKit elements are injected into ClojureScript and 
 Running
 =======
 
-Make a clone of [Ambly](https://github.com/omcljs/ambly) master. In the Ambly project, go into `ambly/Clojure` and do a `lein install`.
-
 To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
 To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file and `target\out` directory referenced in the iOS project workspace. 
@@ -35,7 +33,7 @@ REPL
 
 To interact with the app via the Ambly REPL:
 
-1. Run `lein run -m ambly.repl.jsc` in the `ClojureScript` directory
+1. Run `script/repl` in the `ClojureScript` directory
 2. Choose `[1] Shrimp on iPhone Simulator (<computer name>)`.
 3. In the REPL, do `(require 'shrimp.detail-view-controller)`
 4. Then `(in-ns 'shrimp.detail-view-controller)`.
