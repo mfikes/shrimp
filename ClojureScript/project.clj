@@ -4,8 +4,8 @@
                  [org.clojure/clojurescript "0.0-3269"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [goby "0.3.1"]
-                 [org.omcljs/ambly "0.1.0"]]
-  :plugins [[lein-cljsbuild "1.0.5"]]
+                 [org.omcljs/ambly "0.3.0"]]
+  :plugins [[lein-cljsbuild "1.0.6"]]
   :source-paths ["src"]
   :clean-targets ["target" "out"]
   :cljsbuild {:builds {:dev
