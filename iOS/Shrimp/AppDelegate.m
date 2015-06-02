@@ -63,10 +63,9 @@ void uncaughtExceptionHandler(NSException *exception) {
     [fileManager copyItemAtPath:outPath toPath:compilerOutputDirectory.path error:nil];
 
     NSLog(@"Initializing ClojureScript");
-    self.contextManager = [[ABYContextManager alloc] initWithContext:[[JSContext alloc] init]
+    self.contextManager = [[ABYContextManager alloc] initWithContext:JSGlobalContextCreate(NULL)
                                              compilerOutputDirectory:compilerOutputDirectory];
     [self.contextManager setupGlobalContext];
-    [self.contextManager setUpExceptionLogging];
     [self.contextManager setUpConsoleLog];
     [self.contextManager setUpTimerFunctionality];
     [self.contextManager setUpAmblyImportScript];
@@ -76,11 +75,12 @@ void uncaughtExceptionHandler(NSException *exception) {
     [self.contextManager bootstrapWithDepsFilePath:[[compilerOutputDirectory URLByAppendingPathComponent:@"main" isDirectory:NO] URLByAppendingPathExtension:@"js"].path
                                       googBasePath:[[googDirectory URLByAppendingPathComponent:@"base" isDirectory:NO] URLByAppendingPathExtension:@"js"].path];
     
-    [self requireAppNamespaces:self.contextManager.context];
+    JSContext* jsContext = [JSContext contextWithJSGlobalContextRef:self.contextManager.context];
+    [self requireAppNamespaces:jsContext];
 
     self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!"
                                                   inNamespace:@"shrimp.core"
-                                                  withContext:self.contextManager.context
+                                                  withContext:jsContext
                                             loadingJavaScript:nil];
 #else
     self.cljsManager = [[GBYManager alloc] initWithInitFnName:@"init!"

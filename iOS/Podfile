@@ -2,4 +2,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 pod 'Goby', '~> 0.3.1'
-pod 'Ambly', '~> 0.3.0'
+pod 'Ambly', '~> 0.5.0'
