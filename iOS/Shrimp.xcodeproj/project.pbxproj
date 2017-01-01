@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FC47829F170B4F0FCBD5EFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A2B7C71A57DD6B6903702C /* libPods.a */; };
+		B43A84765925EA972D376A8A /* libPods-Shrimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448132A27FAE77A8B48DED26 /* libPods-Shrimp.a */; };
 		ED0E172F19F58F29004345D9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E172E19F58F29004345D9 /* MasterViewController.m */; };
 		ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173119F58F41004345D9 /* DetailViewController.m */; };
 		ED26DEAD19F5861800822BB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEAC19F5861800822BB4 /* DatabaseManager.m */; };
@@ -34,9 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		185659A67FEB9603F8BF3ECC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C5D8864DA442569ADD3E805D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C8A2B7C71A57DD6B6903702C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		448132A27FAE77A8B48DED26 /* libPods-Shrimp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shrimp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5150508E7AAE6D778E2536B4 /* Pods-Shrimp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shrimp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp.release.xcconfig"; sourceTree = "<group>"; };
+		B8BB98D315FBEF416DAA27F9 /* Pods-Shrimp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shrimp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0E172D19F58F29004345D9 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		ED0E172E19F58F29004345D9 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		ED0E173019F58F41004345D9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC47829F170B4F0FCBD5EFC /* libPods.a in Frameworks */,
+				B43A84765925EA972D376A8A /* libPods-Shrimp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,21 +81,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		033C7FEC51AEFAC461A56146 /* Frameworks */ = {
+		0016AD5F9125A067591C6FC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C8A2B7C71A57DD6B6903702C /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E7F1A4B8E0071FFECF168809 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C5D8864DA442569ADD3E805D /* Pods.debug.xcconfig */,
-				185659A67FEB9603F8BF3ECC /* Pods.release.xcconfig */,
+				B8BB98D315FBEF416DAA27F9 /* Pods-Shrimp.debug.xcconfig */,
+				5150508E7AAE6D778E2536B4 /* Pods-Shrimp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1368C8179B3A8BC43FF9F2FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				448132A27FAE77A8B48DED26 /* libPods-Shrimp.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EDF7941319F571CF005E8532 = {
@@ -105,8 +105,8 @@
 				EDF7941E19F571CF005E8532 /* Shrimp */,
 				EDF7943B19F571CF005E8532 /* ShrimpTests */,
 				EDF7941D19F571CF005E8532 /* Products */,
-				E7F1A4B8E0071FFECF168809 /* Pods */,
-				033C7FEC51AEFAC461A56146 /* Frameworks */,
+				0016AD5F9125A067591C6FC1 /* Pods */,
+				1368C8179B3A8BC43FF9F2FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,11 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDF7944219F571CF005E8532 /* Build configuration list for PBXNativeTarget "Shrimp" */;
 			buildPhases = (
-				8CB9ED16B592292A4D19FCC4 /* Check Pods Manifest.lock */,
+				AF8848A0C0FCE718B78EBED0 /* [CP] Check Pods Manifest.lock */,
 				EDF7941819F571CF005E8532 /* Sources */,
 				EDF7941919F571CF005E8532 /* Frameworks */,
 				EDF7941A19F571CF005E8532 /* Resources */,
-				DB6E548C8D6D45006B6E13E6 /* Copy Pods Resources */,
+				64D6DFEF2BE7F89262409456 /* [CP] Embed Pods Frameworks */,
+				04BCB60C9BDA9CEFC08C287B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,34 +269,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8CB9ED16B592292A4D19FCC4 /* Check Pods Manifest.lock */ = {
+		04BCB60C9BDA9CEFC08C287B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB6E548C8D6D45006B6E13E6 /* Copy Pods Resources */ = {
+		64D6DFEF2BE7F89262409456 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF8848A0C0FCE718B78EBED0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -434,7 +450,7 @@
 		};
 		EDF7944319F571CF005E8532 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5D8864DA442569ADD3E805D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B8BB98D315FBEF416DAA27F9 /* Pods-Shrimp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Shrimp/Info.plist;
@@ -446,7 +462,7 @@
 		};
 		EDF7944419F571CF005E8532 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 185659A67FEB9603F8BF3ECC /* Pods.release.xcconfig */;
+			baseConfigurationReference = 5150508E7AAE6D778E2536B4 /* Pods-Shrimp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Shrimp/Info.plist;
