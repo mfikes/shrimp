@@ -1,5 +1,8 @@
 (ns shrimp.core
-  (:require [goby.core :refer [env]]))
+  (:require [goby.core :refer [env]]
+            [shrimp.database]
+            [shrimp.master-view-controller]
+            [shrimp.detail-view-controller]))
 
 (defn map-keys [f m]
   (reduce-kv (fn [r k v] (assoc r (f k) v)) {} m))

@@ -10,10 +10,10 @@
 		B43A84765925EA972D376A8A /* libPods-Shrimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448132A27FAE77A8B48DED26 /* libPods-Shrimp.a */; };
 		ED0E172F19F58F29004345D9 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E172E19F58F29004345D9 /* MasterViewController.m */; };
 		ED0E173219F58F41004345D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E173119F58F41004345D9 /* DetailViewController.m */; };
+		ED15C8A02038B43900160C69 /* out in Resources */ = {isa = PBXBuildFile; fileRef = ED15C89F2038B43900160C69 /* out */; };
 		ED26DEAD19F5861800822BB4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEAC19F5861800822BB4 /* DatabaseManager.m */; };
 		ED26DEB019F5869700822BB4 /* BaseDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */; };
 		ED26DEB319F5886900822BB4 /* Shrimp.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26DEB219F5886900822BB4 /* Shrimp.m */; };
-		ED873C1F1A9C0FEC0013D4D6 /* out in Resources */ = {isa = PBXBuildFile; fileRef = ED873C1E1A9C0FEC0013D4D6 /* out */; };
 		EDF7942219F571CF005E8532 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942119F571CF005E8532 /* main.m */; };
 		EDF7942519F571CF005E8532 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942419F571CF005E8532 /* AppDelegate.m */; };
 		EDF7942819F571CF005E8532 /* Shrimp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF7942619F571CF005E8532 /* Shrimp.xcdatamodeld */; };
@@ -41,13 +41,13 @@
 		ED0E172E19F58F29004345D9 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		ED0E173019F58F41004345D9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		ED0E173119F58F41004345D9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED15C89F2038B43900160C69 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; name = out; path = ../ClojureScript/out; sourceTree = "<group>"; };
 		ED26DEAB19F5861800822BB4 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		ED26DEAC19F5861800822BB4 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		ED26DEAE19F5869700822BB4 /* BaseDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDatabaseManager.h; sourceTree = "<group>"; };
 		ED26DEAF19F5869700822BB4 /* BaseDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDatabaseManager.m; sourceTree = "<group>"; };
 		ED26DEB119F5886900822BB4 /* Shrimp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shrimp.h; sourceTree = "<group>"; };
 		ED26DEB219F5886900822BB4 /* Shrimp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shrimp.m; sourceTree = "<group>"; };
-		ED873C1E1A9C0FEC0013D4D6 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; name = out; path = ../ClojureScript/target/out; sourceTree = "<group>"; };
 		EDF7941C19F571CF005E8532 /* Shrimp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrimp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF7942019F571CF005E8532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF7942119F571CF005E8532 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		EDF7941319F571CF005E8532 = {
 			isa = PBXGroup;
 			children = (
-				ED873C1E1A9C0FEC0013D4D6 /* out */,
+				ED15C89F2038B43900160C69 /* out */,
 				EDF7941E19F571CF005E8532 /* Shrimp */,
 				EDF7943B19F571CF005E8532 /* ShrimpTests */,
 				EDF7941D19F571CF005E8532 /* Products */,
@@ -254,8 +254,8 @@
 			files = (
 				EDF7942E19F571CF005E8532 /* Main.storyboard in Resources */,
 				EDF7943319F571CF005E8532 /* LaunchScreen.xib in Resources */,
-				ED873C1F1A9C0FEC0013D4D6 /* out in Resources */,
 				EDF7943019F571CF005E8532 /* Images.xcassets in Resources */,
+				ED15C8A02038B43900160C69 /* out in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,13 +305,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shrimp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -22,7 +22,11 @@ Running
 
 To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
-To run Shrimp, first go into the `ClojureScript` directory and run `lein cljsbuild once dev`. This will produce the `main.js` file and `target/out` directory referenced in the iOS project workspace. 
+To run Shrimp, first go into the `ClojureScript` directory and run 
+```
+clojure -m cljs.main -t none -o "out/main.js" -c shrimp.core
+``` 
+This will produce the `main.js` file and `out` directory referenced in the iOS project workspace. 
 
 Then open `iOS/Shrimp.xcworkspace` in Xcode and run the project in an iPhone simulator. You should see the main UI come up with a list view showing a list of shrimp names. Tap on any of these to see editable details.
 
@@ -33,11 +37,12 @@ REPL
 
 To interact with the app via the Ambly REPL:
 
-1. Run `script/repl` in the `ClojureScript` directory
+1. Run `clj -m cljs.main -re ambly` in the `ClojureScript` directory
 2. Choose `[1] Shrimp on iPhone Simulator (<computer name>)`.
-3. In the REPL, do `(in-ns 'shrimp.detail-view-controller)`.
-4. In the app, tap on one of the shrimp names to go to a detail view.
-5. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello")`.
+3. In the REPL, do `(require 'shrimp.core)`
+4. In the REPL, do `(in-ns 'shrimp.detail-view-controller)`.
+5. In the app, tap on one of the shrimp names to go to a detail view.
+6. Try updating the text in one of the fields with `(set! (.-text @name-text-field) "Hello")`.
 
 You can also establish a REPL with a test device; simply follow the same steps but run the app on a device and choose the device when starting the REPL.
 
