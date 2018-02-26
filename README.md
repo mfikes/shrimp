@@ -24,7 +24,7 @@ To set up the Shrimp Xcode project, go into `shrimp/iOS` and do `pod install`.
 
 To run Shrimp, first go into the `ClojureScript` directory and run 
 ```
-clojure -m cljs.main -t none -o "out/main.js" -c shrimp.core
+clojure -m cljs.main -t none -c shrimp.core
 ``` 
 This will produce the `main.js` file and `out` directory referenced in the iOS project workspace. 
 

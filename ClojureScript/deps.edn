@@ -1,6 +1,6 @@
 {:deps
   {org.clojure/clojurescript {:git/url "https://github.com/clojure/clojurescript"
-                              :sha "87e61bd45cb9f4897f0bb7caa75d550461ebd72b"}
+                              :sha "151edf6fb7984d0d26ce65c12d6f5644c40c1063"}
    org.clojure/core.async {:mvn/version "0.4.474"}
    goby {:mvn/version "1.1.0"}
    ambly {:mvn/version "1.2.0"}}}
