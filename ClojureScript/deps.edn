@@ -2,4 +2,5 @@
   {org.clojure/clojurescript {:mvn/version "1.10.191"}
    org.clojure/core.async {:mvn/version "0.4.474"}
    goby {:mvn/version "1.1.0"}
-   ambly {:mvn/version "1.2.0"}}}
+   ambly {:git/url "https://github.com/mfikes/ambly"
+          :sha "1cfaa6908cb1e6825db40d6abcfa04c2d72b79f4"}}}
