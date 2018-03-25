@@ -1,7 +1,7 @@
 (defproject shrimp "0.1.0-SNAPSHOT"
   :description "Demo project for Goby."
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.562"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [org.clojure/clojurescript "1.10.238"]
                  [org.clojure/core.async "0.3.443"]
                  [goby "1.0.0"]
                  [ambly "1.0.0"]]
