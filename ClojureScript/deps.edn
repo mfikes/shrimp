@@ -1,5 +1,5 @@
 {:deps
-  {org.clojure/clojurescript {:mvn/version "1.10.238"}
+  {org.clojure/clojurescript {:mvn/version "1.10.339"}
    org.clojure/core.async {:mvn/version "0.4.474"}
    goby {:mvn/version "1.1.0"}
-   ambly {:mvn/version "1.3.0"}}}
+   ambly {:mvn/version "1.4.0"}}}

@@ -1,10 +1,10 @@
 (defproject shrimp "0.1.0-SNAPSHOT"
   :description "Demo project for Goby."
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.238"]
+                 [org.clojure/clojurescript "1.10.339"]
                  [org.clojure/core.async "0.3.443"]
-                 [goby "1.0.0"]
-                 [ambly "1.0.0"]]
+                 [goby "1.1.0"]
+                 [ambly "1.4.0"]]
   :plugins [[lein-cljsbuild "1.1.6"]]
   :source-paths ["src"]
   :clean-targets ["target" "out"]
