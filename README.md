@@ -37,7 +37,7 @@ REPL
 
 To interact with the app via the Ambly REPL:
 
-1. Run `clj -m cljs.main -co '{:analyze-path ["src"]}' -re ambly -r` in the `ClojureScript` directory
+1. Run `./repl.sh` in the `ClojureScript` directory
 2. Choose `[1] Shrimp on iPhone Simulator (<computer name>)`.
 3. In the REPL, do `(in-ns 'shrimp.detail-view-controller)`.
 4. In the app, tap on one of the shrimp names to go to a detail view.
