@@ -4,7 +4,7 @@
                  [org.clojure/clojurescript "1.10.339"]
                  [org.clojure/core.async "0.3.443"]
                  [goby "1.1.0"]
-                 [ambly "1.6.0"]]
+                 [ambly "1.7.0"]]
   :plugins [[lein-cljsbuild "1.1.6"]]
   :source-paths ["src"]
   :clean-targets ["target" "out"]

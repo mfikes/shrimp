@@ -3,5 +3,5 @@ platform :ios, '8.0'
 
 target 'Shrimp' do
   pod 'Goby', '~> 1.1.0'
-  pod 'Ambly', '~> 1.6.0'
+  pod 'Ambly', '~> 1.7.0'
 end
