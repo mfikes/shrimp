@@ -180,8 +180,6 @@
 				EDF7941819F571CF005E8532 /* Sources */,
 				EDF7941919F571CF005E8532 /* Frameworks */,
 				EDF7941A19F571CF005E8532 /* Resources */,
-				64D6DFEF2BE7F89262409456 /* [CP] Embed Pods Frameworks */,
-				04BCB60C9BDA9CEFC08C287B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,36 +267,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04BCB60C9BDA9CEFC08C287B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64D6DFEF2BE7F89262409456 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shrimp/Pods-Shrimp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF8848A0C0FCE718B78EBED0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
