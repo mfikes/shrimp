@@ -52,6 +52,6 @@ Here is what this all looks like in [Cursive](https://cursiveclojure.com) (using
 License
 =======
 
-Copyright © 2015-2018 Mike Fikes and Contributors
+Copyright © 2015-2020 Mike Fikes and Contributors
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
